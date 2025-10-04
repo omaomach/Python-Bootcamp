@@ -6,8 +6,8 @@ count = 0
 text_lower = text.lower()
 
 for char in text_lower:
+    print(char)
     if char in vowels:
-        print(char)
         count += 1
 
-print(count)
+print(f"There are {count} vowels")

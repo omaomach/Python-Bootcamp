@@ -1,3 +1,5 @@
+# Concatenate two strings: "Hello" and "World" with a space in between.
+
 # text1 = "Hello"
 # text2 = "World"
 

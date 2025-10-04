@@ -1,3 +1,5 @@
+# Take a user input string and check if it is a palindrome (same forwards and backwards).
+
 text = input("Write a sentence: ")
 text_reverse = text[::-1]
 
