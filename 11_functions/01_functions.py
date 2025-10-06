@@ -14,7 +14,10 @@
 
 def average(a, b, c):
     solution = (a + b + c)/3
-    print(solution)
+    # print(solution)
+    return(solution)
 
-average(3, 5, 1)
+avr1 = average(3, 5, 1)
+avr2 = average(2, 3, 2)
 
+print(f"avr1 = {avr1}\navr2 = {avr2}")
