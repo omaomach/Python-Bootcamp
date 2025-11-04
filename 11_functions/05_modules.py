@@ -12,8 +12,8 @@ import pandas
 print(math.sqrt(8))
 mymodule.hello()
 r = requests.get('https://www.comraid.io')
-# print(r.text)
-h = r.headers['content-type']
-print(h)
+print(r.text)
+# h = r.headers['content-type']
+# print(h)
 
 # os.abort()

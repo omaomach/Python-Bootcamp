@@ -18,7 +18,7 @@ def fib(n): # A function that basically calls itself
     
     return fib(n-2) + fib(n-1)
 
-print(fib(6))
+print(fib(4))
 
 # fib(4) + fib(5)
 # fib(2) + fib(3) + fib(5)
