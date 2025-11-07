@@ -4,4 +4,4 @@ def factorial(n):
     else:
         return n * factorial(n - 1)
 
-print(factorial(10))
+print(factorial(4))
