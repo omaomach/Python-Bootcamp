@@ -6,6 +6,3 @@ fruits[1] = 'orange'
 print(fruits)
 
 print(len(fruits))
-
-
-
