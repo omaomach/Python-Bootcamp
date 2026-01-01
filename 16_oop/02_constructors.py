@@ -5,7 +5,7 @@ class Employee:
         self.name = name
         self.bond = bond
 
-    def get_salary(self):
+    def get_salary(self): # self is import because it's a way to reference the object of the class which is being created
         return self.salary
 
     def get_info(self):
