@@ -1,11 +1,13 @@
 ### Class ###
 # Think of a class as a blueprint or a template.
 # It defines what an object will be like - what data it will hold and what actions in can perform.
-# It doesn't create the object its, but holds the information dictating how the object should be
+# It doesn't create the object, but holds the information dictating how the object should be
 
 ### Object ###
-# An object is a specific instance created from the class blueprint
+# An object is a specific instance created from the class blueprint/ class template
 # Each object has its own unique set of data
+
+## We create classes and objects so that we can model real world problems in our program
 
 class Employee:
     company = 'COMRAID'
