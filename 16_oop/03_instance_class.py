@@ -13,9 +13,9 @@ class Employee:
     def get_info(self):
         return f"The name of the employee is {self.name}, salary is ${self.salary} and bond is ${self.bond}"
 
-employee1 = Employee(250000, 'Joash', '94', "iBall")
+employee1 = Employee(250000, 'Joash', '94', "iBall") # iBall is the "company" instance attribute
 print(employee1.company) # Will always print instance attribute whenever present, else will print class attribute
 print(Employee.company) # This will always print the class attribute
 
-# Object Introspection - this is a way in Python, to find out how many methods an object has access to
+# Object Introspection - this is a way in Python, to find out how many methods or attributes an object has access to
 print(dir(employee1))
