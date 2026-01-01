@@ -9,3 +9,4 @@ class Person:
 
 mwabe = Person("Mwabe", 21)
 mwabe.print_info()
+# print(mwabe.age, mwabe.age)
