@@ -9,7 +9,7 @@ class Point:
     def print_point(self):
         print(f"x is {self.x}, y is {self.y}")
 
-    def __add__(self, p):
+    def __add__(self, p): # This is what we call a magic method
         return Point((self.x + p.x), (self.y + p.y))
 
 p1 = Point(10, 20)
