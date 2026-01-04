@@ -7,11 +7,18 @@ def decorator(function):
         print("Called and executed the function.")
     return wrapper
 
+### The decorator pattern ###
+# Wrapper - It wraps the original function with additional behavior
+# Higher-order function - it takes a function as input and returns a new function
+# Function transformer - it transforms one function into another
+
+@decorator # this is a syntactic sugar for function wrapping/replacement
 def say_hello():
     print("Hello")
 
-f = decorator(say_hello)
-f()
+say_hello()
+# f = decorator(say_hello)
+# f()
 
 '''
 f will look something like this
