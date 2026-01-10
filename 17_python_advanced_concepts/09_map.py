@@ -6,4 +6,4 @@ numbers = [1, 2, 3, 45, 41]
 
 squared_numbers = map(lambda x: x * x, numbers) # Please remember, by default, map returns a map object
 
-print(list(squared_numbers)) # Here, we convert the map object to a list
+print(list(squared_numbers)) # Here, we are type casting the map object to a list
