@@ -1,12 +1,12 @@
 # Walrus operator examples
 ### 1 ###
-def very_slow_func():
-    print("Something...")
-    print("Something...")
-    print("Something...")
-    print("Something...")
-    print("Something...")
-    return 7
+# def very_slow_func():
+#     print("Something...")
+#     print("Something...")
+#     print("Something...")
+#     print("Something...")
+#     print("Something...")
+#     return 7
 
 # if (a := very_slow_func()) > 6:
 #     print(a)
