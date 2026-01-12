@@ -7,7 +7,7 @@ class Book:
         return f"{self.title} by {self.author}"
 
     def __len__(self):
-        return self.title.__len__()
+        return len(self.title)
 
 book = Book("The Holy Bible", "God")
 print(book)
