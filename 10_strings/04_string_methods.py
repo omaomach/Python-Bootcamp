@@ -15,7 +15,7 @@ str = "hello world" # Strings are immutable
 # print(text.rstrip()) # #Output " joash omao"
 
 # text = "Python is fun"
-# print(text.find("is")) # Returns Index if first occurence
+# print(text.find("is")) # Returns Index if first occurrence
 # print(text.replace("fun", "awesome"))
 
 # text = "Apples,Bananas,Pineapples"
