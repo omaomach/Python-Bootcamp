@@ -17,6 +17,12 @@ def subtract(a, b):
 def multiply(a, b):
     return a * b
 
+def print_details(**kwargs):
+    for key, value in kwargs.items():
+        print(f'{key}: {value}')
+
+print_details(name="Alice", age=25, city="Delhi")
+
 print(add(1, 2))
 print(subtract(1, 2))
 print(multiply(12, 2))
