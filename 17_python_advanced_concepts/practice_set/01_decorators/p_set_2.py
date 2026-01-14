@@ -12,4 +12,4 @@ def timer(func):
 def calculate_sum(n):
     return sum(range(n))
 
-calculate_sum(1000000)
+print(calculate_sum(1000000))

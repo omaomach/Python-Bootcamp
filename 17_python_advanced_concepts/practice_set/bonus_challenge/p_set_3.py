@@ -1,6 +1,11 @@
 import logging
 
-logging.basicConfig(level=logging.ERROR)
+# Configure logging to file
+logging.basicConfig(
+    filename="errors.log",
+    level=logging.ERROR,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 class InvalidUserInputError(Exception):
     def __init__(self, value, message="Incorrect password"):
