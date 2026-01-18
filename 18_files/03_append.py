@@ -1,0 +1,13 @@
+# Append data to an existing file called John Doe.txt
+# It should add data about John Doe's Hometown
+# In the case of append, if the file doesn't exist, a new file will be created
+
+f = open('John Doe.txt', 'a')
+
+string = '''
+John Doe initially lived in Phoenix, Arizona. He is a very nice guy.
+'''
+
+f.write(string)
+
+f.close()
