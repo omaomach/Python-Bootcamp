@@ -1,0 +1,3 @@
+
+John Doe is a nice guy. He lives in NYC and he works with Python.
+God willing, I'll also go abroad.

@@ -1,0 +1,3 @@
+Hello, my name is Joash and I LOVE Python.
+I am learning Python from the basics on order to build a strong foundation.
+I'll rebuild the Rally backend using Python. FastAPI to be specific.
