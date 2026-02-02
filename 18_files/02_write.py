@@ -3,7 +3,7 @@
 # You need to note that when using write "w" for writing. If the file exists, its
 # contents will be overwritten. If the file doesn't exist, a new one will be created.
 
-f = open('John Doe.txt', 'w')
+f = open('sample.txt', 'w')
 
 string = '''
 John Doe is a nice guy. He lives in NYC and he works with Python.
