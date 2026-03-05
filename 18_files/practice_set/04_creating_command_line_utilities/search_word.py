@@ -17,3 +17,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     search_word(args.filename, args.word)
+
+
+# python3.13 search_word.py tasks.txt "don't"

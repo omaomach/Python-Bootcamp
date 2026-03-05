@@ -1,5 +1,2 @@
-f = open("notes.txt", "w")
-
-string = "Learning Python is fun!"
-
-f.write(string)
+with open("notes.txt", "w") as f:
+    f.write("Learning Python is fun!")

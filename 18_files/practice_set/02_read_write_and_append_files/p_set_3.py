@@ -1,3 +1,3 @@
 with open('tasks.txt', 'r') as f:
-    lines = f.readlines()
-    print(lines)
+    for line in f.readlines():
+        print(line)
