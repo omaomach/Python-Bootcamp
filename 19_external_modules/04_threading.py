@@ -17,3 +17,23 @@ for thread in threads:
     thread.join() # Wait for all threads to finish
 
 print("All threads completed.")
+
+
+'''
+Here are the official Python docs for each topic:
+Threading
+
+https://docs.python.org/3/library/threading.html — the full threading module, including Lock()
+
+Multiprocessing
+
+https://docs.python.org/3/library/multiprocessing.html — the multiprocessing module
+
+Asyncio
+
+https://docs.python.org/3/library/asyncio.html — the asyncio module
+
+The GIL
+
+https://wiki.python.org/moin/GlobalInterpreterLock — Python's wiki explanation of the GIL
+'''
