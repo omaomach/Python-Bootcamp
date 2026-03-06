@@ -10,3 +10,6 @@ else:
 
 with open ("omaomach.txt", "w") as f:
     f.write(r.text)
+
+
+# https://requests.readthedocs.io/en/latest/user/quickstart/
