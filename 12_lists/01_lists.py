@@ -9,4 +9,5 @@ mixed = [43, "Hello", False, 4.2]
 # print(marks[0])
 # print(marks[2:4])
 
-print(mixed[4]) # IndexError: list index out of range
+# print(mixed[4]) # IndexError: list index out of range
+print(len(marks))
