@@ -9,7 +9,8 @@ def hello_world():
         "Saurabh": 99,
         "Mark": 55,
         "Jeff": 88,
-        "Omao": 77
+        "Omao": 77,
+        "Joel": 99
     }
     return render_template("index.html", marks=marks)
 

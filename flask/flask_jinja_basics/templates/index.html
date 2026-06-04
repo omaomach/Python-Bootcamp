@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fanduka - Africa's number one jersey shop</title>
-</head>
-<body>
+  </head>
+  <body>
     <ul>
-        {# This is a comment in Jinja#}
-        <li>The marks of John is {{marks['John']}}</li>
-        <li>The marks of Saurabh is {{marks['Saurabh']}}</li>
-        <li>The marks of Mark is {{marks['Mark']}}</li>
-        <li>The marks of Jeff is {{marks['Jeff']}}</li>
-        <li>The marks of Omao is {{marks['Omao']}}</li>
+      {# This is a comment in Jinja#} {% for key in marks.keys() %}
+      <li style="white-space: nowrap;">
+        The marks of {{key}} is {{marks.get(key)}}
+        {% if marks.get(key) < 50 %}
+          <p>Try Harder</p>
+        {% else %}
+          <p>Good Job</p>
+        {% endif %}
+      </li>
+      {% endfor %}
     </ul>
-</body>
+  </body>
 </html>
