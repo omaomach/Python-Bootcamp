@@ -24,9 +24,9 @@ for question in questions:
     print(f"d. {[question[4]]}")
 
     # Check if the answer is correct or not
-    a = int(input("Enter your answer:\n1 for a\n2 for b\n3 for c\n4 for d\n\n"))
+    answerNo = int(input("Enter your answer:\n1 for a\n2 for b\n3 for c\n4 for d\n\n"))
 
-    if (question[5] == a):
+    if (question[5] == answerNo):
         print("Correct Answer")
     else:
         print(f"Incorrect answer, the answer is {question[5]}")
