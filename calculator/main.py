@@ -2,7 +2,7 @@ try:
     a = int(input("Enter the first number: "))
     b = int(input("Enter the second number: "))
 
-    print("What kind of operation do you want to perform. Press + for addition\nPress - for subtraction\n Press / for division\n Press * for multiplication")
+    print("What kind of operation do you want to perform.\nPress + for addition\nPress - for subtraction\nPress / for division\nPress * for multiplication")
 
     o = input("Enter Operation: ")
 
