@@ -6,6 +6,7 @@ while True:
     notification.notify(
         title="Please drink some water",
         message="Its good for your health",
+        app_name="Water Reminder",
         timeout=10
     )
-    time.sleep(3600)
+    time.sleep(10)
