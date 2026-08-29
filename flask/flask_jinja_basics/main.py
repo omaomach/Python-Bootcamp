@@ -4,6 +4,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
+    subjects_offerred = ["Mathematics", "Physics", "Chemistry", "History"]
+    subject = "Mathematics"
     marks = {
         "John": 45,
         "Saurabh": 99,
@@ -12,6 +14,6 @@ def hello_world():
         "Omao": 77,
         "Joel": 99
     }
-    return render_template("index.html", marks=marks)
+    return render_template("index.html", marks=marks, subject=subject, total=len(marks), subjects_offerred=subjects_offerred)
 
 app.run(debug=True)
