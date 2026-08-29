@@ -7,7 +7,8 @@
   </head>
   <body>
     <ul>
-      {# This is a comment in Jinja#} {% for key in marks.keys() %}
+      {# This is a comment in Jinja#}
+      {% for key in marks.keys() %}
       <li style="white-space: nowrap;">
         The marks of {{key}} is {{marks.get(key)}}
         {% if marks.get(key) < 50 %}
