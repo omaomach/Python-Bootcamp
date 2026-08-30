@@ -1,30 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>fanduka - Africa's number one jersey shop</title>
-  </head>
-  <body>
-    <h1>{{ subject }} Results of {{total}} Students</h1>
-    <ul>
-      {% for name, mark in marks.items() %}
-      <li style="white-space: nowrap;">
-        The marks of {{ name }} is {{ mark }}
-        {% if mark < 50 %}
-          <p>Try harder</p>
-        {% else %}
-          <p>Good Job</p>
-        {% endif%}
-      </li>
-      {% endfor %}
-    </ul>
+{% extends "base.html" %}
 
-    <h2>Subjects Offerred</h2>
-    <ul>
-      {% for course in subjects_offerred %}
-      <li>{{ course }}</li>
-      {% endfor %}
-    </ul>
-  </body>
-</html>
+{% block title %}Results{% endblock %}
+
+{% block content %}
+  <h1>{{ subject }} Results</h1>
+  <ul>
+    {% for name, mark in marks.items() %}
+    <li style="white-space: nowrap;">
+      The marks of {{ name }} is {{ mark }}
+      {% if mark < 50 %}
+        <p>Try Harder</p>
+      {% else %}
+        <p>Good Job</p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
