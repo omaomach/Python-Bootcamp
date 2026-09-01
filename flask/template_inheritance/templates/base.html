@@ -23,16 +23,10 @@
     </style>
 </head>
 <body>
-    <nav>
-        <a href="/"><Span>Home</Span></a>
-        <a href="/about"><Span>About</Span></a>
-        <a href="/contact"><Span>Contact</Span></a>
-    </nav>
+    {% include '_navbar.html' without context %} {# The 'without context' means the parent templates context i.e marks/subject wont be passed to the partial #}
     {% block content %}
         <p>Welcome to Fanduka.</p>
     {% endblock %}
-
-    <footer>This is the footer</footer>
-
+    {% include '_footer.html' %}
 </body>
 </html>

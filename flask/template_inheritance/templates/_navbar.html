@@ -1,0 +1,7 @@
+{# A partial is a fragment, not a page. _navbar.html has no <!DOCTYPE>, no <html>, no <head> — just the snippet. That's the opposite of base.html, which is a full skeleton. Different roles: a skeleton is extended into; a fragment is pulled in. #}
+
+<nav>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('about' ) }}">About</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+</nav>
