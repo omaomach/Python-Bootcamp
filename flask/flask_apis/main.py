@@ -15,6 +15,11 @@ def get_marks():
     values = [1, marks, 77]
     return jsonify(values)
 
+@app.route("/students")
+def get_students():
+    students = [{"name": name, "marks": mark} for name, mark in marks.items()]
+    return jsonify(students), 200
+
 @app.route("/students/<name>")
 def get_student(name):
     if name not in marks:
