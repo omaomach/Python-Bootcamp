@@ -1,4 +1,4 @@
-from flask import Flask, flash, render_template, redirect
+from flask import Flask, flash, render_template
 
 app = Flask(__name__)
 
@@ -12,5 +12,10 @@ def index():
 def logout():
     flash("Get out bruh!", "success")
     return render_template("logout.html")
+
+@app.route("/flashonly")
+def flashonly():
+    flash("Testing the cookie", "success")
+    return "flashed, check the cookie"
 
 app.run(debug=True)
