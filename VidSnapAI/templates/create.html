@@ -11,14 +11,27 @@
     <div class="container">
         <div class="upload-container">
             <h1 class="upload-title">Create Your Reel</h1>
-            <p class="upload-instructions">Upload your video files to create an amazing reel. You can upload multiple files.</p>
+            <p class="upload-instructions">Upload your images to create an amazing reel. You can upload multiple files.</p>
             
+            <!-- 
+            "action="/create" + method="post"", submits a POST request to /create, which is the branch of create() that does the saving
+            Same "which URL, which verb as always".
+
+            "enctype="multipart/form-data"", tells the browser to encode the form so files can be transmitted. Without it, the browser only send  filenames
+            of file inputs, not their contents -- request.files would arrive empty and the uploads would silently vanish.
+            Any form with a file input needs this exact enctype
+            -->
             <form action="/create" enctype="multipart/form-data" method="post" class="dropzone" id="myDropzone">
+                <!-- on submit, this will become request.form.get("uuid") -->
+                <input name="uuid" type="hidden" value="{{myid}}" />
                 <div class="fallback">
                     <div id="fileInputs">
                         <div class="file-input-group">
-                            <input name="file1" type="file" class="file-input" />
-                            <input name="uuid" type="hidden" value="{{myid}}" />
+
+                            <!-- becomes the key "file1" in request.files -->
+                             <!-- The loop "for key, file in request.files.items()" walks exactly these -->
+                             <input name="file1" type="file" class="file-input" accept="image/*" />
+
                             <button type="button" class="remove-file-btn" onclick="removeFileInput(this)" disabled>×</button>
                         </div>
                     </div>
@@ -26,6 +39,7 @@
                 </div>
                 
                 <div class="text-input-container">
+                    <!-- this becomes request.form.get("text") -->
                     <textarea class="text-input" id="textInput" name="text" placeholder="Enter your text to be added as voice here..." rows="4"></textarea>
                 </div>
                 
@@ -42,12 +56,14 @@
 <script>
     let fileCounter = 2; // Start from 2 since we already have file1
 
+    // Dynamic file inputs (the JS). addFileInput() clones a file input and names each new one file$(filecounter)->file2,file3,... starting at 2
+    // This is why create() loops request.files.items() instead of reading one fixed field. The number of files is unknown, so the backend iterates whatever came in
     function addFileInput() {
         const fileInputs = document.getElementById('fileInputs');
         const newFileInput = document.createElement('div');
         newFileInput.className = 'file-input-group';
         newFileInput.innerHTML = `
-            <input name="file${fileCounter}" type="file" class="file-input" />
+            <input name="file${fileCounter}" type="file" class="file-input" accept="image/*" />
             <button type="button" class="remove-file-btn" onclick="removeFileInput(this)">×</button>
         `;
         fileInputs.appendChild(newFileInput);
