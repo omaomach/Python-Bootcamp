@@ -1,6 +1,5 @@
 
 import os
-import uuid
 from elevenlabs import VoiceSettings
 from elevenlabs.client import ElevenLabs
 from config import ELEVENLABS_API_KEY
@@ -9,8 +8,13 @@ elevenlabs = ElevenLabs(
     api_key=ELEVENLABS_API_KEY,
 )
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+base_path = os.path.join(BASE_DIR, "user_uploads")
+
 def text_to_speech_file(text: str, folder: str) -> str:
     # Calling the text_to_speech conversion API with detailed parameters
+    # "response" is not a finished mp3 sitting in memory. Its a generator --
+    # a stream that hands you the audio in pieces, one at a time as ElevenLabs produces it
     response = elevenlabs.text_to_speech.convert(
         voice_id="pNInz6obpgDQGcFmaJgB", # Adam pre-made voice
         output_format="mp3_22050_32",
@@ -26,17 +30,17 @@ def text_to_speech_file(text: str, folder: str) -> str:
         ),
     )
 
-    # uncomment the line below to play the audio back
+    # uncomment the line below to play the audio back (needs: from elevenlabs import play)
     # play(response)
 
-    # Generating a unique file name for the output MP3 file
-    save_file_path = os.path.join(f"VidSnapAI/user_uploads/{folder}", "audio.mp3")
+    # Adding the file name to the folder path
+    save_file_path = os.path.join(base_path, folder, "audio.mp3")
 
     # Writing the audio to a file
     with open(save_file_path, "wb") as f:
-        for chunk in response:
-            if chunk:
-                f.write(chunk)
+        for chunk in response: # catch each segment as it streams in
+            if chunk: # skip any empty segment
+                f.write(chunk) # append that segment onto the file on disk
 
     print(f"{save_file_path}: A new audio file was saved successfully!")
 
