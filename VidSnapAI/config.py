@@ -1,1 +1,9 @@
-ELEVENLABS_API_KEY="sk_1eff775cf09d54c8a798ce470be50490784a064e827a0963"
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv()
+ELEVENLABS_API_KEY = os.environ.get("ELEVENLABS_API_KEY")
+
+if not ELEVENLABS_API_KEY:
+    raise RuntimeError("ELEVENLABS_API_KEY is not set. Check you .env file.")
